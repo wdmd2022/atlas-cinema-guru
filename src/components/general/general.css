@@ -1,1 +1,32 @@
 /* styling for general-use components */
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-container {
+    display: flex;
+    flex-direction: row;
+}
+
+input {
+    border-bottom: 1px solid red;
+}
+
+/* select input */
+
+.select-container {
+    /* style the select input container */
+    display: flex;
+    flex-direction: column;
+}
+
+/* search bar */
+.search-container {
+    /* figure out search styling later */
+    display: flex;
+    flex-direction: column;
+}
+
+
