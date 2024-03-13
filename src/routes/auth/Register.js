@@ -6,6 +6,7 @@ import Input from '../../components/general/Input';
 import Button from '../../components/general/Button';
 import { faKey } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const Register = ({ username, password, setUsername, setPassword }) => {
 
@@ -17,7 +18,7 @@ const Register = ({ username, password, setUsername, setPassword }) => {
                 <Input icon={faKey} label="Password" type="password" className="input-light" value={password} setValue={setPassword} />
             </div>
             <div className='auth-submit'>
-                <Button label="Sign In" className="button" icon={faKey} type="submit" />
+                <Button label="Sign Up" className="button" icon={faPlus} type="submit" />
             </div>
         </div>
     );

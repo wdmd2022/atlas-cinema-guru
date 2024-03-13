@@ -14,13 +14,6 @@
     font-weight: 900;
 }
 
-/* .light-red {
-    background-color: red!important;
-}
-.dark-red {
-    background-color: #BB000E!important;
-} */
-
 .auth-section p{
     font-weight: bold;
 }
@@ -33,4 +26,9 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 45px;
+}
+
+.auth-section .input-light .icon-wrapper {
+    /* this feels like the movie Inception */
+    color: red;
 }
