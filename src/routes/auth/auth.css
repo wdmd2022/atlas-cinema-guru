@@ -2,5 +2,21 @@
 
 .auth-header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
+}
+
+.auth-button {
+    flex: 1;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 900;
+}
+
+.light-red {
+    background-color: red;
+}
+.dark-red {
+    background-color: #BB000E;
 }

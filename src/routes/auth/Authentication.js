@@ -11,8 +11,17 @@ const Authentication = ({ setUserUsername, setIsLoggedIn }) => {
     return (
         <div>
             <form className='auth-header'>
-                <Button label="Sign In" className="button auth-button" onClick={() => set_Switch(true)} />
-                <Button label="Sign Up" className="button auth-button" onClick={() => set_Switch(false)} />
+                {_switch ? (
+                    <>
+                        <Button label="Sign In" className="button auth-button light-red" onClick={() => set_Switch(true)} />
+                        <Button label="Sign Up" className="button auth-button dark-red" onClick={() => set_Switch(false)} />
+                    </>
+                ) : (
+                    <>
+                        <Button label="Sign In" className="button auth-button dark-red" onClick={() => set_Switch(true)} />
+                        <Button label="Sign Up" className="button auth-button light-red" onClick={() => set_Switch(false)} />
+                    </>
+                )}
             </form>
         </div>
     );
