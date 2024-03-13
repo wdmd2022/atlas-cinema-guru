@@ -1,0 +1,42 @@
+/* styling for the navigation components */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    background-color: #000;
+    padding: 0 50px;
+}
+
+.app-name {
+    color: white;
+    font-size: 15px;
+}
+
+.user-links {
+    display: flex;
+    align-items: center;
+}
+
+.user-photo, .welcome-text, .logout-div {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.user-photo img {
+    border: 3px solid red;
+    border-radius: 50%;
+    height: 41px;
+}
+
+.welcome-text {
+    color: white;
+    font-size: 16px;
+}
+
+.logout-div {
+    color: #BB000E;
+    margin-right: 0;
+}

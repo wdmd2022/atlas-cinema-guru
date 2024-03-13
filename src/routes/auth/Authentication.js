@@ -15,7 +15,7 @@ const Authentication = ({ setUserUsername, setIsLoggedIn }) => {
         onSubmit.preventDefault();
         if (_switch) {
             axios.post('http://localhost:8000/api/auth/login', { username, password }).then((response) => {
-                localStorage.setItem('token', response.data.accessToken);
+                localStorage.setItem('accessToken', response.data.accessToken);
                 setUserUsername(username);
                 setIsLoggedIn(true);
                 console.log(response);
@@ -28,7 +28,7 @@ const Authentication = ({ setUserUsername, setIsLoggedIn }) => {
             });
         } else {
             axios.post('http://localhost:8000/api/auth/register', { username, password }).then((response) => {
-                localStorage.setItem('token', response.data.accessToken);
+                localStorage.setItem('accessToken', response.data.accessToken);
                 setUserUsername(username);
                 setIsLoggedIn(true);
                 console.log(response);
@@ -43,18 +43,22 @@ const Authentication = ({ setUserUsername, setIsLoggedIn }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div className='auth-header' >
-                <Button label="Sign In" className={_switch? "button auth-button light-red" : "button auth-button dark-red"} onClick={() => set_Switch(true)} type="button" />
-                <Button label="Sign Up" className={_switch? "button auth-button dark-red" : "button auth-button light-red"} onClick={() => set_Switch(false)} type="button" />
+        <div className="auth-background">
+            <div className="auth-box">
+                <form onSubmit={handleSubmit}>
+                    <div className='auth-header' >
+                        <Button label="Sign In" className={_switch? "button auth-button light-red" : "button auth-button dark-red"} onClick={() => set_Switch(true)} type="button" />
+                        <Button label="Sign Up" className={_switch? "button auth-button dark-red" : "button auth-button light-red"} onClick={() => set_Switch(false)} type="button" />
+                    </div>
+                    <div className='auth-form'>
+                        {_switch ?
+                        <Login username={username} password={password} setUsername={setUsername} setPassword={setPassword} />
+                        :
+                        <Register username={username} password={password} setUsername={setUsername} setPassword={setPassword} /> }
+                    </div>
+                </form>
             </div>
-            <div className='auth-form'>
-                {_switch ?
-                <Login username={username} password={password} setUsername={setUsername} setPassword={setPassword} />
-                :
-                <Register username={username} password={password} setUsername={setUsername} setPassword={setPassword} /> }
-            </div>
-        </form>
+        </div>
     );
 }
 

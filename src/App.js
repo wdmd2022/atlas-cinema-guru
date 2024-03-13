@@ -4,6 +4,7 @@ import SelectInput from './components/general/SelectInput.js';
 import Button from './components/general/Button.js';
 import SearchBar from './components/general/SearchBar.js';
 import { faKey } from '@fortawesome/free-solid-svg-icons';
+import Header from './components/navigation/Header.js';
 
 import { useState, useEffect } from 'react';
 // import axios from 'axios';
@@ -30,6 +31,7 @@ function App() {
   // })
   return (
     <div className="App">
+      <Header userUsername={userUsername} setIsLoggedIn={setIsLoggedIn} />
       <Input    type="text"
                 label="Input1"
                 value="value"
