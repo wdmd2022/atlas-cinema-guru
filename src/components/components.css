@@ -1,1 +1,10 @@
 /* styling for miscellaneous components */
+
+/* activity list items */
+.activity-list-item {
+    color: white;
+    font-size: 12;
+}
+.red-text {
+    color: #F31D27;
+}
