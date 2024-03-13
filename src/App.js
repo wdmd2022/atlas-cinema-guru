@@ -5,14 +5,14 @@ import Button from './components/general/Button.js';
 import SearchBar from './components/general/SearchBar.js';
 import { faKey } from '@fortawesome/free-solid-svg-icons';
 
-// import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 // import axios from 'axios';
 import Authentication from './routes/auth/Authentication.js';
 // import Dashboard from './routes/dashboard/Dashboard.js';
 
 function App() {
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const [userUsername, setUserUsername] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userUsername, setUserUsername] = useState("");
   // const [accessToken, setAccessToken] = useState("");
   // useEffect(() => {
   //   const localToken = localStorage.getItem('accessToken');
@@ -31,28 +31,28 @@ function App() {
   return (
     <div className="App">
       <Input    type="text"
-                label="Password"
+                label="Input1"
                 value="value"
                 setValue="()=>{}"
                 icon={faKey}
                 className="input-light"
             />
       <Input    type="text"
-                label="Password"
+                label="Input1-err"
                 value="value"
                 setValue="()=>{}"
                 icon={faKey}
                 className="input-light input-error"
             />
       <Input    type="text"
-                label="Password"
+                label="Input2"
                 value="value"
                 setValue="()=>{}"
                 icon={faKey}
                 className="input-dark"
             />
       <Input    type="text"
-                label="Password"
+                label="Input2-err"
                 value="value"
                 setValue="()=>{}"
                 icon={faKey}
@@ -71,7 +71,7 @@ function App() {
                 />
       <SearchBar />
       {/* {isLoggedIn ? <Dashboard /> : <Authentication />} */}
-      <Authentication setUserUsername="()=>{}" setIsLoggedIn="()=>{}" />
+      <Authentication setUserUsername={setUserUsername} setIsLoggedIn={setIsLoggedIn} />
     </div>
   );
 }

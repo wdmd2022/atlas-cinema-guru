@@ -1,7 +1,7 @@
 import './auth.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
 import Input from '../../components/general/Input';
 import Button from '../../components/general/Button';
 import { faKey } from '@fortawesome/free-solid-svg-icons';
