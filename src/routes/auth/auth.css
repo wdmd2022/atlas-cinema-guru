@@ -14,9 +14,23 @@
     font-weight: 900;
 }
 
-.light-red {
-    background-color: red;
+/* .light-red {
+    background-color: red!important;
 }
 .dark-red {
-    background-color: #BB000E;
+    background-color: #BB000E!important;
+} */
+
+.auth-section p{
+    font-weight: bold;
+}
+
+.auth-input {
+    margin: 25px;
+}
+
+.auth-submit {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 45px;
 }

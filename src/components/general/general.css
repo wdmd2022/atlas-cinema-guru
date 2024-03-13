@@ -138,3 +138,10 @@ button:hover {
     padding-right: 5px;
     margin: auto;
 }
+
+.button.light-red {
+    background-color: red !important;
+}
+.button.dark-red {
+    background-color: #BB000E !important;
+}
