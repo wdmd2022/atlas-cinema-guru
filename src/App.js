@@ -7,7 +7,7 @@ import { faKey } from '@fortawesome/free-solid-svg-icons';
 
 // import { useState, useEffect } from 'react';
 // import axios from 'axios';
-// import Authentication from './routes/auth/Authentication.js';
+import Authentication from './routes/auth/Authentication.js';
 // import Dashboard from './routes/dashboard/Dashboard.js';
 
 function App() {
@@ -71,6 +71,7 @@ function App() {
                 />
       <SearchBar />
       {/* {isLoggedIn ? <Dashboard /> : <Authentication />} */}
+      <Authentication setUserUsername="()=>{}" setIsLoggedIn="()=>{}" />
     </div>
   );
 }
