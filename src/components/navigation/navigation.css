@@ -1,5 +1,6 @@
 /* styling for the navigation components */
 
+/* TOP NAV BAR */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -39,4 +40,50 @@
 .logout-div {
     color: #BB000E;
     margin-right: 0;
+}
+
+/* SIDEBAR NAV */
+.sidebar-nav {
+    color: white;
+    background-color: #BB000E;
+    width: 50px;
+    height: 100vh;
+    transition: width 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.sidebar-nav.wide {
+    width: 190px;
+}
+
+.sidebar-nav-ul li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sidebar-nav-ul li span {
+    display: none;
+    margin-left: 10px;
+}
+
+.sidebar-nav.wide .sidebar-nav-ul {
+    display: inline;
+}
+
+.latest-activities-div {
+    display: none;
+}
+
+.sidebar-nav.wide lastest-activities-div {
+    display: block;
+    width: 100%
+}
+
+.sidebar-activity-ul, .sidebar-nav-ul {
+    padding: 0;
+    list-style-type: none;
 }
