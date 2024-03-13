@@ -10,7 +10,7 @@ const Input = ({ label, type, className, value, setValue, icon, inputAttributes 
     return (
         <div className={`input-container ${className}`}>
             <div className="label-container">
-                {icon && <FontAwesomeIcon icon={icon} className="input-icon" />}
+                {icon && <FontAwesomeIcon icon={icon} className="icon-wrapper"/>}
                 <label htmlFor={id}>{label}:</label>
             </div>
             <input id={id} type={type} value={value} onChange={handleInput} {...inputAttributes} />

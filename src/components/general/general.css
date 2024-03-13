@@ -3,15 +3,59 @@
 .input-container {
     display: flex;
     flex-direction: column;
+    margin: 10px;
+    padding: 10px;
 }
 
 .label-container {
     display: flex;
     flex-direction: row;
+    padding-bottom: 5px;
 }
 
 input {
+    border: none;
     border-bottom: 1px solid red;
+    cursor: text;
+    outline: none;
+}
+
+.input-light .icon-wrapper {
+    color: #000;
+    opacity: .4;
+    padding-right: 10px;
+}
+.input-light label {
+    color: #1C1C1C;
+    opacity: 1;
+}
+
+.input-dark input {
+    background-color: #2C2C2C;
+    color: #FFF;
+}
+.input-dark .icon-wrapper {
+    color: #FFF;
+    opacity: .4;
+    padding-right: 10px;
+}
+.input-dark label {
+    color: #FFF;
+    opacity: 1;
+}
+.input-dark .label-container {
+    background-color: #000;
+}
+
+.input-error input {
+    border: 1px solid red;
+}
+.input-error label {
+    color: red;
+}
+.input-error .icon-wrapper {
+    color: red;
+    opacity: 1;
 }
 
 /* select input */
@@ -20,13 +64,77 @@ input {
     /* style the select input container */
     display: flex;
     flex-direction: column;
+    background-color: #1C1C1C;
+    color: white;
+    border: none;
+    margin: 15px;
+}
+
+.select-container label {
+    text-align: left;
+}
+
+.select-container select {
+    background-color: #2C2C2C;
+    color: white;
+    border: none;
+    border-bottom: 1px solid red;
+}
+
+.select-dark {
+    color: white;
 }
 
 /* search bar */
 .search-container {
     /* figure out search styling later */
+    margin: 15px;
+    padding: 5px;
+    background-color: #2c2c2c;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    border: none;
+    border-radius: 15px;
+    color: lightgray;
 }
 
+.search-container input {
+    border-radius: 5px;
+    border: none;
+    background-color: #2c2c2c;
+    padding-left: 15px;
+    color: #FFF;
+    opacity: .6;
+    font-size: .75em;
+}
 
+.search-container:hover {
+    color: #FFF;
+    transition: color 1s ease;
+}
+.search-container input:hover {
+    color: #FFF;
+    opacity: 1;
+    transition: opacity .5s ease;
+}
+
+/* button */
+.button {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: .9em;
+    align-items: middle;
+}
+
+button:hover {
+    background-color: #BB000E;
+    transition: background 1s ease;
+}
+
+.button-icon {
+    padding-right: 5px;
+    margin: auto;
+}
