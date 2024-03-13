@@ -20,7 +20,7 @@ function App() {
         setUserUsername(response.data.username);
       })
     }
-  })
+  }, []);
   return (
     <div className="App">
       {isLoggedIn ? <Dashboard /> : <Authentication />}
