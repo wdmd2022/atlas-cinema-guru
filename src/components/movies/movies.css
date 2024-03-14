@@ -1,0 +1,16 @@
+/* styling for movies */
+
+.tag {
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    background-color: #2b2b2b;
+    border-radius: 20px;
+    border: 1px solid #BB000E
+
+}
+.tag.selected {
+    background-color: red;
+    border: none;
+    transition: background-color 1s ease;
+}

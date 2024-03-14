@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolder, faStar, faClock } from '@fortawesome/free-solid-svg-icons';
+import Activity from '../Activity.js';
 
 const SideBar = () => {
     const navigate = useNavigate();
@@ -46,9 +47,9 @@ const SideBar = () => {
             <div className='latest-activities-div'>
                 <h1 className='sidebar-activity-title'>Latest Activities</h1>
                 <ul className='sidebar-activity-ul'>
-                    <li>placeholder</li>
-                    <li>placeholder</li>
-                    <li>placeholder</li>
+                    {activities.map((activity) => (
+                        <Activity ley={activity.id} activity={activity} />
+                    ))}
                 </ul>
             </div>
         </nav>

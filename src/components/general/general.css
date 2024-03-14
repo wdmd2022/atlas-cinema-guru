@@ -131,7 +131,7 @@ input {
 
 button:hover {
     background-color: #BB000E;
-    transition: background 1s ease;
+    transition: background-color 1s ease;
 }
 
 .button-icon {

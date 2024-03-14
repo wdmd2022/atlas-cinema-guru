@@ -9,15 +9,14 @@ const Activity = ({ activity }) => {
         day: 'numeric',
         year: 'numeric',
     });
-    let listName = "Watch later";
-    if (activity.ActivityType === "favorite") {
-        listName = "favorites";
-    }
+    let listName = activity.activityType === "favorite" ? "Favorites" : "Watch Later";
     return (
         <li className='activity-list-item'>
-            <p><span className='red-text'>{activity.user.username}</span> added <span className='red-text'>{activity.title.title}</span> to {listName} - {formattedDate}</p>
+            <p>
+                <span className='red-text'>{activity.user.username}</span> added <span className='red-text'>{activity.title.title}</span> to {listName} - {formattedDate}
+            </p>
         </li>
-    )
-}
+    );
+};
 
 export default Activity;
