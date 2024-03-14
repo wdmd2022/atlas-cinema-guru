@@ -4,6 +4,8 @@ import SideBar from '../../components/navigation/SideBar';
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import HomePage from './HomePage';
+import Favorites from './Favorites';
+import WatchLater from './WatchLater';
 
 const Dashboard = ({ userUsername, setIsLoggedIn }) => {
     return (
