@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faClock } from '@fortawesome/free-solid-svg-icons';
+import backupImg from '../../assets/backup.png';
 
 const MovieCard = ({ movie }) => {
     const [isFavorite, setIsFavorite] = useState(false);
@@ -51,10 +52,13 @@ const MovieCard = ({ movie }) => {
             console.error(`sadly, the ${type} list did not update`, err);
         }
     };
+
     return (
         <li className='card'>
             <div className='card-image-container'>
-                <img src={movie.imageurls[0]} alt={movie.title} />
+                <img
+                    src={movie.imageurls[0] || backupImg }
+                    alt={movie.title} />
                 <div className='card-icons'>
                     <FontAwesomeIcon icon={faClock} onClick={() => handleClick('watchlater')} className={isWatchLater ? 'card-fa-icon filled' : 'card-fa-icon'} />
                     <FontAwesomeIcon icon={faStar} onClick={() => handleClick('favorite')} className={isFavorite ? 'card-fa-icon filled' : 'card-fa-icon'} />
@@ -65,7 +69,7 @@ const MovieCard = ({ movie }) => {
             </div>
             <div className='summary-box'>
                 <p>
-                    {movie.summary || "Just guess what it's about"}
+                    {movie.synopsis || "Just guess what it's about"}
                 </p>
                 <div className='genre-bubbles'>
                     {movie.genres.map((genre, index) => (

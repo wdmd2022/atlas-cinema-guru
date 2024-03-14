@@ -17,8 +17,12 @@ const SideBar = () => {
         const route = `/${pageName.replace(/\s+/g, '').toLowerCase()}`;
         navigate(route);
     };
+    const accessToken = localStorage.getItem('accessToken')
+    const config = {
+        headers: { Authorization: `Bearer ${accessToken}`}
+    };
     useEffect(() => {
-        axios.get('http://localhost:8000/api/activity').then(response => {
+        axios.get('http://localhost:8000/api/activity', config).then(response => {
             setActivities(response.data.slice(0, 10));
         }).catch(error => {
             console.error("This is so embarrassing, I could not find your activities:", error);

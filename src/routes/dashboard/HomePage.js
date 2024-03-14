@@ -40,7 +40,7 @@ const HomePage = () => {
         <div>
             <Filter minYear={minYear} setMinYear={setMinYear} maxYear={maxYear} setMaxYear={setMaxYear} sort={sort} setSort={setSort} genres={genres} setGenres={setGenres} title={title} setTitle={setTitle} />
             <ul className="movies-list">
-                {movies.map(movie => (<MovieCard key={movie.imdbId} movie={movie} />))}
+                {movies.map(movie => (<MovieCard key={movie.id} movie={movie} />))}
             </ul>
             <Button label="Load More.." className="button" onClick={() => setPage(prevPage => prevPage + 1)} />
         </div>

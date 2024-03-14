@@ -97,14 +97,17 @@
     color: white;
     width: 100%;
     font-size: 24pt;
-    padding: 15px;
+    padding: 0px;
+    text-overflow: ellipsis;
 }
 
 .summary-box {
     background-color: #2C2C2C;
     color: white;
-    font-size: 13pt;
+    font-size: 8pt;
     padding: 10px;
+    text-overflow: ellipsis;
+    height: 10px;
 }
 
 .genre-bubbles {
