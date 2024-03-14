@@ -3,3 +3,13 @@
 .dash {
     background-color: #2b2b2b;
 }
+
+.movies-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+

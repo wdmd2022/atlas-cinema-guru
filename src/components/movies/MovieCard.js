@@ -57,7 +57,7 @@ const MovieCard = ({ movie }) => {
                 <img src={movie.imageurls[0]} alt={movie.title} />
                 <div className='card-icons'>
                     <FontAwesomeIcon icon={faClock} onClick={() => handleClick('watchlater')} className={isWatchLater ? 'card-fa-icon filled' : 'card-fa-icon'} />
-                    <FontAwesomeIcon icon={faStar} onClick={handleClick('favorite')} className={isFavorite ? 'card-fa-icon filled' : 'card-fa-icon'} />
+                    <FontAwesomeIcon icon={faStar} onClick={() => handleClick('favorite')} className={isFavorite ? 'card-fa-icon filled' : 'card-fa-icon'} />
                 </div>
                 <div className='title-overlay'>
                     {movie.title}

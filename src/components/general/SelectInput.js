@@ -9,8 +9,8 @@ const SelectInput = ({ label, options, className, value, setValue }) => {
         <div className={`select-container ${className}`}>
             <label>{label}:</label>
             <select value={value} onChange={handleSelect}>
-                {options.map((option) => {
-                    return <option value={option} key={option}>{option}</option>
+                {options.map((option, key) => {
+                    return <option value={option.value} key={key}>{option.label}</option>
                 })}
             </select>
         </div>
