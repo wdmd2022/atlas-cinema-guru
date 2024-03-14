@@ -15,7 +15,7 @@ const Tag = ({ genre, filter, genres, setGenres }) => {
         }
     };
     return (
-        <li className={selected ? 'tag selected' : 'tag'} onClick={handleTag}>{genre}</li>
+        <li className={filter ? 'tag selected' : 'tag'} onClick={handleTag}>{genre}</li>
     )
 }
 
