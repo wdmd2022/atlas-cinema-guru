@@ -14,8 +14,8 @@ const Dashboard = ({ userUsername, setIsLoggedIn }) => {
                 <SideBar />
                 <Routes>
                     <Route path="/home" element={<HomePage />} />
-                    {/* <Route path="/favorites" element={<Favorites />} />
-                    <Route path="/watchlater" element={<WatchLater />} /> */}
+                    <Route path="/favorites" element={<Favorites />} />
+                    <Route path="/watchlater" element={<WatchLater />} />
                     <Route path="*" element={<Navigate to="/home" replace />} />
                 </Routes>
             </div>
